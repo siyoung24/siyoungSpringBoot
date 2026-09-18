@@ -60,7 +60,7 @@ public class ArticleController {
         articleRepository.save(articleEntity);
         return "redirect:/articles/" + id;
     }
-    @GetMapping("/articles/{id}/delte")
+    @GetMapping("/articles/{id}/delete")
     public String delete(@PathVariable Long id, RedirectAttributes rttr) {
         log.info ("삭제 요청이 들어왔습니다!!");
         Article target = articleRepository.findById(id).orElse(null);
